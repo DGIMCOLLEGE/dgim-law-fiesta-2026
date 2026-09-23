@@ -1,22 +1,366 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>DGIM Law Fiesta 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DGIM Law Fiesta 2026 Registration</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f2e8;
+  color: #0b2742;
+}
+
+header {
+  background: #062846;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin: 5px 0;
+  font-size: 34px;
+}
+
+.gold {
+  color: #d4a83d;
+}
+
+.container {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: #b88a27;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #98701f;
+}
+
+.qr {
+  text-align: center;
+}
+
+.qr img {
+  max-width: 280px;
+  width: 100%;
+}
+
+.notice {
+  background: #fff6dc;
+  padding: 15px;
+  border-left: 4px solid #b88a27;
+  margin-top: 15px;
+}
+
+footer {
+  text-align: center;
+  background: #062846;
+  color: white;
+  padding: 18px;
+  margin-top: 30px;
+}
+
+.small {
+  font-size: 14px;
+  color: #666;
+}
+
+.event-date {
+  font-size: 14px;
+  color: #777;
+}
+</style>
+
 </head>
+
 <body>
 
-<h1>DGIM LAW FIESTA 2026</h1>
-<p>8th, 9th & 10th October 2026</p>
-<h2>Registration Portal</h2>
-<h2>Registration Payment</h2>
+<header>
 
-<p>Scan the QR below using any UPI application.</p>
+<img src="images/dgim-logo.png" alt="DGIM Logo">
+
+<h1>DGIM <span class="gold">LAW FIESTA 2026</span></h1>
+
+<p>Inter-College Law & Academic Festival</p>
+
+<p>
+8th • 9th • 10th October 2026
+</p>
+
+</header>
+
+
+<div class="container">
+
+
+<div class="card">
+
+<h2>Register for Law Fiesta 2026</h2>
+
+<p>
+Please complete the registration form carefully.
+</p>
+
+<div class="notice">
+<strong>Registration Deadline:</strong>
+25th September 2026
+</div>
+
+</div>
+
+
+<form id="registrationForm">
+
+
+<div class="card">
+
+<h2>1. Select Event</h2>
+
+<label>Select Event *</label>
+
+<select id="event" name="event" required>
+
+<option value="">-- Select Event --</option>
+
+<option value="National Client Counselling Competition">
+National Client Counselling Competition
+</option>
+
+<option value="Legal Quiz">
+Legal Quiz
+</option>
+
+<option value="Debate Competition">
+Debate Competition
+</option>
+
+<option value="National Mediation Competition">
+National Mediation Competition
+</option>
+
+<option value="AI & Law Workshop">
+National Workshop on Artificial Intelligence & Law
+</option>
+
+<option value="Solo Dance">
+Inter-College Dance Competition — Solo
+</option>
+
+<option value="Group Dance">
+Inter-College Dance Competition — Group
+</option>
+
+<option value="Fashion Show">
+Inter-College Fashion Show
+</option>
+
+</select>
+
+</div>
+
+
+<div class="card">
+
+<h2>2. Participant Details</h2>
+
+
+<label>Full Name *</label>
+<input type="text" name="name" required>
+
+
+<label>Mobile Number *</label>
+<input type="tel" name="mobile" required>
+
+
+<label>WhatsApp Number *</label>
+<input type="tel" name="whatsapp" required>
+
+
+<label>Email Address *</label>
+<input type="email" name="email" required>
+
+
+<label>College / University Name *</label>
+<input type="text" name="college" required>
+
+
+<label>Course *</label>
+<input type="text" name="course" placeholder="Example: BA LL.B" required>
+
+
+<label>Year / Semester *</label>
+<input type="text" name="year" placeholder="Example: 3rd Year" required>
+
+
+<label>City</label>
+<input type="text" name="city">
+
+
+<label>Faculty Coordinator Name</label>
+<input type="text" name="facultyCoordinator">
+
+
+<label>Faculty Coordinator Mobile</label>
+<input type="tel" name="facultyMobile">
+
+</div>
+
+
+<div class="card">
+
+<h2>3. Payment</h2>
+
+<div class="qr">
+
+<p>
+Scan the QR below using Paytm, Google Pay,
+PhonePe or any UPI application.
+</p>
 
 <img
 src="images/paytm-qr.png"
-alt="DGIM Paytm QR"
-width="300">
+alt="DGIM Payment QR">
 
-<p>After payment, please enter your UTR / Transaction ID below.</p>
+</div>
+
+
+<label>Amount Paid *</label>
+<input type="number" name="amount" required>
+
+
+<label>UTR / Transaction ID *</label>
+<input type="text" name="utr" required>
+
+
+<label>Payment Date *</label>
+<input type="date" name="paymentDate" required>
+
+
+<div class="notice">
+
+Payment will be verified by DGIM.
+Submission of this form does not itself confirm payment.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>4. Declaration</h2>
+
+<label style="font-weight:normal;">
+
+<input
+type="checkbox"
+name="declaration"
+required
+style="width:auto; margin-right:8px;">
+
+I confirm that the information provided above is correct
+and the payment details belong to this registration.
+
+</label>
+
+
+<button type="submit">
+
+SUBMIT REGISTRATION
+
+</button>
+
+
+<p class="small">
+Your registration will be confirmed after payment verification.
+</p>
+
+</div>
+
+
+</form>
+
+</div>
+
+
+<footer>
+
+Delhi Global Institute of Management<br>
+
+www.dgimfaridabad.com
+
+</footer>
+
+
+<script>
+
+document
+.getElementById("registrationForm")
+.addEventListener("submit", function(e) {
+
+e.preventDefault();
+
+alert(
+"Your form design is working. We will connect this button to the DGIM registration database in the next step."
+);
+
+});
+
+</script>
+
+
 </body>
 </html>
