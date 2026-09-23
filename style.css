@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f2e8;
+  color: #0a2946;
+  text-align: center;
+}
+
+header {
+  background: #062846;
+  color: white;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.event-card {
+  background: white;
+  border-radius: 15px;
+  padding: 22px;
+  margin: 15px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,.10);
+}
+
+button {
+  background: #b58b2a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
