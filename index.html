@@ -347,20 +347,134 @@ www.dgimfaridabad.com
 
 <script>
 
+const SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbws61mwdqC-l1uAqEmlCGylELT9QyKKnNlSxCf7FxXNa_0FY4HBPhSg6K0edVJJQA8P/exec";
+
+
 document
 .getElementById("registrationForm")
-.addEventListener("submit", function(e) {
+.addEventListener("submit", async function(e) {
 
-e.preventDefault();
+  e.preventDefault();
 
-alert(
-"Your form design is working. We will connect this button to the DGIM registration database in the next step."
-);
+  const form = e.target;
+
+  const submitButton =
+    form.querySelector('button[type="submit"]');
+
+  submitButton.disabled = true;
+  submitButton.innerText =
+    "SUBMITTING REGISTRATION...";
+
+
+  const formData =
+    new FormData(form);
+
+
+  const data = {
+
+    event:
+      formData.get("event"),
+
+    name:
+      formData.get("name"),
+
+    mobile:
+      formData.get("mobile"),
+
+    whatsapp:
+      formData.get("whatsapp"),
+
+    email:
+      formData.get("email"),
+
+    college:
+      formData.get("college"),
+
+    course:
+      formData.get("course"),
+
+    year:
+      formData.get("year"),
+
+    city:
+      formData.get("city"),
+
+    facultyCoordinator:
+      formData.get("facultyCoordinator"),
+
+    facultyMobile:
+      formData.get("facultyMobile"),
+
+    amount:
+      formData.get("amount"),
+
+    utr:
+      formData.get("utr"),
+
+    paymentDate:
+      formData.get("paymentDate")
+
+  };
+
+
+  try {
+
+    const response =
+      await fetch(
+        SCRIPT_URL,
+        {
+          method: "POST",
+          body: JSON.stringify(data)
+        }
+      );
+
+
+    const result =
+      await response.json();
+
+
+    if(result.status === "success") {
+
+      alert(
+        "Registration Submitted Successfully!\n\n" +
+        "Your Registration ID:\n" +
+        result.registrationId +
+        "\n\nPayment Status: Pending Verification"
+      );
+
+      form.reset();
+
+    }
+
+    else {
+
+      alert(
+        "Registration could not be submitted. Please contact DGIM."
+      );
+
+    }
+
+  }
+
+  catch(error) {
+
+    alert(
+      "There was a problem submitting your registration. Please try again."
+    );
+
+    console.error(error);
+
+  }
+
+
+  submitButton.disabled = false;
+  submitButton.innerText =
+    "SUBMIT REGISTRATION";
 
 });
 
 </script>
-
 
 </body>
 </html>
